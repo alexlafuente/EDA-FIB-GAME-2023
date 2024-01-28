@@ -1,0 +1,39 @@
+primero --> mapear todo y ver donde estan los ascensores
+primer turno --> cada tropa BFS ascensor más cercano, encontrarlo y encolar las órdenes (no todavía).
+
+
+
+
+
+si hay peligro de sol --> encontrar y recorrer shortest path al ascensor (quizá el ascensor más cercano esté en el sol --> eliminar esos)
+
+funcion checkear alrededores-
+
+
+
+
+struct que indica tropa y si tiene vector de órdenes
+
+--> Asignarle órdenes a nueva tropa
+--> Asignarle órdenes a tropa que yaa ha cumplido todas
+
+
+
+
+
+
+
+
+Distribución del código:
+
+codigo 3 partes:
+
+1ro checkear todo el mapa al principio del todo y guardarse en una matriz los puntos de interés
+
+2do checkear diferentes cosas importantes cada turno (para cada individuo, ejemplo hellhounds cercanos a pioneer. Decidir cuantas casillas cercanas al individuo mirar, probando diferentes estrategias)
+
+3ro bfs al que se le da la posicion inical del individuo y la posicion donde llegar, para que encuentre el camino más corto, para posteriormente desplazarse.
+(después cambiarlo a dijkstra donde las casillas ocupadas por ti tienen la menor prioridad, las casillas ocupadas por el enemigo tiene la mayor prioridad y las 
+casillas sin ocupar tienen prioridad intermedia) --> esta funcion debe ser genérica para el movimiento
+
+hacer todo lo anterior para cada individuo (no preocuparse mucho por la eficencia)
